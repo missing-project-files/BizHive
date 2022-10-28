@@ -1,25 +1,46 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  return (
+
+ return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+        <div className="center-column">
+
+
+          <div className="item-row">
+            <span>Create Django Project</span>
+          </div>
+
+          <div className="item-row">
+            <span>Create React app: "npx create-react-app appname"</span>
+          </div>
+
+          <div className="item-row">
+            <span>Drag react app into root directory of django project</span>
+          </div>
+
+          <div className="item-row">
+            <span>Configure TEMPALTES engine</span>
+          </div>
+
+          <div className="item-row">
+            <span>Configure URL path</span>
+          </div>
+
+          <div className="item-row">
+            <span>Configure static files</span>
+          </div>
+
+          <div className="item-row">
+            <span>cd into react app and run "npm rn build"</span>
+          </div>
+
+        </div>
+
     </div>
   );
 }
+
 
 export default App;
