@@ -33,7 +33,7 @@ function App() {
           </div>
 
           <div className="item-row">
-            <span>cd into react app and run "npm rn build"</span>
+            <span>cd into react app and run "npm run  build"</span>
           </div>
 
         </div>
