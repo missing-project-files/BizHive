@@ -3,7 +3,7 @@ import Navbar from "./main_menu/navigation/Navbar";
 function App() {
   return (
     <>
-      <Navbar />
+      <Navbar></Navbar>
     </>
   );
 }
