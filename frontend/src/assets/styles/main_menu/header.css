@@ -1,5 +1,5 @@
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -179,7 +179,7 @@ nav {
   color: var(--clr-primary-5);
   padding-left: 1.5rem;
 }
-.page-icons {
+.link-icons {
   display: none;
 }
 .links-container {
@@ -219,15 +219,19 @@ nav {
     padding: 0;
     background: transparent;
   }
-  .page-icons {
+  .link-icons {
     display: flex;
   }
-  .page-icons a {
+  .link-icons a {
     margin: 0 0.5rem;
     color: var(--clr-primary-5);
     transition: var(--transition);
   }
-  .page-icons a:hover {
+  .link-icons a:hover {
     color: var(--clr-primary-7);
+  }
+  .search-container {
+    left: 60%;
+    width: 25rem;
   }
 }

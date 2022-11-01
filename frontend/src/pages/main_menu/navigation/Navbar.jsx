@@ -5,7 +5,7 @@ import "../../../assets/styles/main_menu/header.css";
 import "./navbar_data";
 
 import logo from "./../../../assets/images/main_menu/logo.svg";
-import { pages } from "./navbar_data";
+import { links } from "./navbar_data";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
@@ -27,30 +27,29 @@ const Navbar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <img src={logo} className="logo" alt="logo" />
+          <TextField
+            className="search-container"
+            id="navbar-header"
+            variant="outlined"
+            label="Search"
+            size="small"
+          />
           <button className="nav-toggle" onClick={toggleLinks}>
             <FaBars />
           </button>
         </div>
         <div className="links-container" ref={linksContainerRef}>
-          <div className="search" ref={linksRef}>
-            <TextField
-              id="navbar-header"
-              variant="standard"
-              fullWidth
-              label="Search"
-            />
-          </div>
+          <ul className="link-icons" ref={linksRef}>
+            {links.map((linkIcon) => {
+              const { id, url, icon } = linkIcon;
+              return (
+                <li key={id}>
+                  <a href={url}>{icon}</a>
+                </li>
+              );
+            })}
+          </ul>
         </div>
-        <ul className="page-icons">
-          {pages.map((pageIcon) => {
-            const { id, url, icon } = pageIcon;
-            return (
-              <li key={id}>
-                <a href={url}>{icon}</a>
-              </li>
-            );
-          })}
-        </ul>
       </div>
     </nav>
   );
