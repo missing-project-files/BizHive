@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./pages/main_menu/navigation/Navbar";
+import Landing from "./pages/landing/Landing";
 function App() {
   return (
     <>
-      <Navbar></Navbar>
+      <Landing></Landing>
     </>
   );
 }
