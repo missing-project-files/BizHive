@@ -1,11 +1,15 @@
-import logo from "../../assets/images/landing/logo.png";
-import main from "../../assets/images/landing/coolText.png";
+import main_image from "../../assets/images/landing/logo.png";
+import logo_header from "../../assets/images/landing/logo-black.png";
 import "../../assets/styles/landing_styles/landing.css";
 const Landing = () => {
   return (
     <main>
       <nav>
-        <img src={main} alt="brett statistics logo" className="landingLogo" />
+        <img
+          src={logo_header}
+          alt="brett statistics logo"
+          className="landingLogo"
+        />
       </nav>
       <div className="landingContainerPage">
         {/* info */}
@@ -25,7 +29,11 @@ const Landing = () => {
           </p>
           <button className="landingLoginBtn">Login/Register</button>
         </div>
-        <img src={logo} alt="landing main image" className="landingMainImage" />
+        <img
+          src={main_image}
+          alt="landing main image"
+          className="landingMainImage"
+        />
       </div>
     </main>
   );
