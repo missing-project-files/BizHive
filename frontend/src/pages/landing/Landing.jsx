@@ -1,5 +1,5 @@
 import main_image from "../../assets/images/landing/logo.png";
-import logo_header from "../../assets/images/landing/logo-black.png";
+import logo_header from "../../assets/images/landing/logo-no-background.svg";
 import "../../assets/styles/landing_styles/landing.css";
 const Landing = () => {
   return (
