@@ -3,16 +3,35 @@ import logo_header from "../../assets/images/landing/logo-no-background.svg";
 import "../../assets/styles/landing_styles/landing.css";
 import styled from "styled-components";
 
-const Button = styled.button`
-  background: red;
-  color: white;
-  font-size: 2rem;
+const Wrapper = styled.main`
+  nav {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    color: red;
+  }
+  .landingContainerPage {
+    display: grid;
+    align-items: center;
+  }
+  h1 {
+    font-weight: 700;
+    span {
+      color: #4149f2;
+    }
+  }
+  .landingLoginBtn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #4149f2;
+    cursor: pointer;
+    padding: 0 3em;
+    transition: all 0.3s;
+  }
 `;
 
 const Landing = () => {
   return (
-    <main>
-      <Button>Test</Button>
+    <Wrapper>
       <nav>
         <img
           src={logo_header}
@@ -44,7 +63,8 @@ const Landing = () => {
           className="landingMainImage"
         />
       </div>
-    </main>
+    </Wrapper>
   );
 };
+
 export default Landing;
