@@ -5,9 +5,11 @@ import styled from "styled-components";
 
 const Wrapper = styled.main`
   nav {
-    margin: 0 auto;
+    margin-left: 450px;
+    height: var(--nav-height);
     display: flex;
     align-items: center;
+    min-width: 2500px;
   }
 
   .landingContainerPage {
@@ -15,6 +17,7 @@ const Wrapper = styled.main`
     display: grid;
     align-items: center;
     margin-top: -3rem;
+    margin-left: calc(50% - 700px);
   }
 
   h1 {
@@ -27,14 +30,15 @@ const Wrapper = styled.main`
     color: var(--grey-600);
   }
   .landingInfo {
+    max-width: 500px;
     color: black;
   }
   .landingMainImage {
     display: none;
   }
-  @media (min-width: 992px) {
+  @media (min-width: 1420px) {
     .landingContainerPage {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 650px 1800px;
       column-gap: 3rem;
     }
     .landingMainImage {
