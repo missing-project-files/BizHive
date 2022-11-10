@@ -8,24 +8,38 @@ const Wrapper = styled.main`
     margin: 0 auto;
     display: flex;
     align-items: center;
-    color: red;
   }
+
   .landingContainerPage {
+    min-height: calc(100vh - var(--nav-height));
     display: grid;
     align-items: center;
+    margin-top: -3rem;
   }
+
   h1 {
     font-weight: 700;
     span {
-      color: #4149f2;
+      color: var(--primary-500);
     }
   }
-  .landingLoginBtn {
-    background: rgba(255, 255, 255, 0.2);
-    color: #4149f2;
-    cursor: pointer;
-    padding: 0 3em;
-    transition: all 0.3s;
+  p {
+    color: var(--grey-600);
+  }
+  .landingInfo {
+    color: black;
+  }
+  .landingMainImage {
+    display: none;
+  }
+  @media (min-width: 992px) {
+    .landingContainerPage {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 3rem;
+    }
+    .landingMainImage {
+      display: block;
+    }
   }
 `;
 
