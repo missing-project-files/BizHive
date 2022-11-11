@@ -221,7 +221,6 @@ ul {
 }
 .form-label {
     display: block;
-    font-size: var(--smallText);
     margin-bottom: 0.5rem;
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
@@ -324,17 +323,13 @@ ul {
 .Toastify__toast {
     text-transform: capitalize;
 }
-
-.landingLogo{
-    width: 100%;
-    max-width: 5%;
-}
 .landingMainImage{
     width: 100%;
     max-width: 35%;
 }
 .landingLoginBtn,
 input[type="submit"] {
+    margin-left: 25%;
     cursor: pointer;
     border-radius: 0;
     text-decoration: none;
