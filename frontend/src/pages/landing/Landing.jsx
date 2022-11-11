@@ -4,10 +4,6 @@ import "../../assets/styles/landing_styles/landing.css";
 import styled from "styled-components";
 
 const Wrapper = styled.main`
-  nav {
-    height: var(--nav-height);
-    display: flex;
-  }
   .landingLogo {
     display: block;
     margin-left: auto;
@@ -137,13 +133,13 @@ const Landing = () => {
         />
       </nav>
       <div className="landingContainerPage">
-        {/* info */}
         <div className="landingInfo">
           <h1>
             Statistics
             <span> Analysis</span> app
           </h1>
           <p>
+            {/* move to en.jsx */}
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
