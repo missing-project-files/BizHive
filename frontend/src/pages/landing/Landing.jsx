@@ -112,6 +112,9 @@ const Wrapper = styled.main`
     }
   }
   @media (min-width: 1200px) {
+    .landingLogo {
+      margin-top: 20px;
+    }
     .landingContainerPage {
       grid-template-columns: 600px 1500px;
       column-gap: 3rem;
