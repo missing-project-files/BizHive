@@ -24,14 +24,17 @@ const Register = () => {
 
   return (
     <RegisterWrapper className="full-register-page">
-      <nav>
         <img
           src={logo}
-          alt="brett register logo"
-          className="registerLogo"
+          alt="register logo"
+          className="logo-register"
         />
-      </nav>
-      <form className="form-register" onSubmit={onSubmit}></form>
+      <form className="form-register" onSubmit={onSubmit}>
+      <h3>Login</h3>
+      <div className="form-row">
+        <label htmlFor="name" className="form-label">Name</label>
+      </div>
+      </form>
     </RegisterWrapper>
   );
 };
