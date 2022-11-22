@@ -33,6 +33,15 @@ const Register = () => {
       <h3>Login</h3>
       <div className="form-row">
         <label htmlFor="name" className="form-label">Name</label>
+        <input type="text"
+               name="name"
+               value={values.name}
+               onChange={handleChange}
+               className="form-input"
+        />
+        <button type="submit" className="btn-register">
+          submit
+        </button>
       </div>
       </form>
     </RegisterWrapper>
