@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import TextField from "@mui/material/TextField";
 import { FaBars } from "react-icons/fa";
-import "../../../assets/styles/main_menu/header.css";
+import "../../../assets/styles/main_menu/navigation/header.css";
 import "./navbar_data";
 
 import logo from "./../../../assets/images/main_menu/logo.svg";

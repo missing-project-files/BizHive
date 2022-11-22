@@ -1,6 +1,6 @@
 import main_image from "../../assets/images/landing/logo.png";
 import logo_header from "../../assets/images/landing/logo-no-background.svg";
-import "../../assets/styles/landing_styles/landing.css";
+import "../../assets/styles/landing/landing.css";
 import Wrapper from "../../assets/wrappers/LandingWrapper";
 import { Link } from "react-router-dom";
 
