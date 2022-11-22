@@ -1,7 +1,7 @@
 import React from "react";
 import Landing from "./pages/landing/Landing";
 import Register from "./pages/register/Register";
-import Error from "./pages/error/ErrorPage";
+import Error from "./pages/error/Error";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
