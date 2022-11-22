@@ -2,6 +2,7 @@ import main_image from "../../assets/images/landing/logo.png";
 import logo_header from "../../assets/images/landing/logo-no-background.svg";
 import "../../assets/styles/landing_styles/landing.css";
 import Wrapper from "../../assets/wrappers/LandingWrapper";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -29,7 +30,9 @@ const Landing = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <button className="landingLoginBtn">Login/Register</button>
+          <Link to="/register" className="landingLoginBtn">
+            Login/Register
+          </Link>
         </div>
         <img
           src={main_image}
