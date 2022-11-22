@@ -1,5 +1,7 @@
 /* eslint-disable */
 import { useState } from "react";
+import RegisterWrapper from "../../assets/wrappers/RegisterWrapper";
+import logo from "../../assets/images/register/logo-no-background.svg"
 
 const initialState = {
   name: "",
@@ -21,9 +23,16 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h1>register page</h1>
-    </div>
+    <RegisterWrapper className="full-register-page">
+      <nav>
+        <img
+          src={logo}
+          alt="brett register logo"
+          className="registerLogo"
+        />
+      </nav>
+      <form className="form-register" onSubmit={onSubmit}></form>
+    </RegisterWrapper>
   );
 };
 
