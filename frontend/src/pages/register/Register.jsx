@@ -31,7 +31,6 @@ const Register = () => {
       />
       <form className="form-register" onSubmit={onSubmit}>
         <h3>Login</h3>
-        <form />
         <div className="form-row">
           <label htmlFor="name" className="form-label">Name</label>
           <input type="text"
