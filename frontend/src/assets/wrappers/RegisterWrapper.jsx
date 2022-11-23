@@ -10,8 +10,8 @@ const RegisterWrapper = styled.section`
 
   .logo-register {
     display: block;
-    margin: 0 auto 1.38rem;
-    width: 10%;
+    width: 5.311%;
+    margin: 20px auto 1.38rem;
   }
 
   .form-register {
