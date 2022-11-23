@@ -39,7 +39,7 @@ const Wrapper = styled.main`
     }
     h1 {
       min-height: auto;
-      font-size: 1.052rem;
+      font-size: 30px;
       span {
         display: none;
       }
@@ -53,19 +53,18 @@ const Wrapper = styled.main`
   }
   @media (max-width: 247px) {
     .landingLoginBtn {
-      margin: -20%;
-      padding: 3px 8px;
       font-size: 10px;
-      line-height: 25px;
+      line-height: 15px;
       text-transform: uppercase;
       font-family: "Montserrat", sans-serif;
-      font-weight: 200;
+      font-weight: 400;
+      margin-left: 0;
     }
     h1 {
-      margin-left: -5px;
+      display: none;
     }
   }
-  @media (max-width: 755px) and (min-width: 389px) {
+  @media (max-width: 755px) and (min-width: 247px) {
     .landingContainerPage {
       margin: auto;
       min-height: auto;
@@ -83,11 +82,21 @@ const Wrapper = styled.main`
       display: none;
     }
     .landingLoginBtn {
-      margin: 5%;
+      margin-left: 12px;
       align-items: center;
     }
+    h1 {
+      font-weight: 700;
+      span {
+        color: var(--primary-500);
+      }
+    }
+    .landingInfo {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
-  @media (max-width: 1199px) {
+  @media (max-width: 1199px) and (min-width: 755px) {
     .landingLoginBtn {
       margin-left: 31%;
       align-items: center;
@@ -100,12 +109,6 @@ const Wrapper = styled.main`
       margin-right: auto;
       width: 50%;
       align-items: center;
-    }
-    h1 {
-      font-weight: 700;
-      span {
-        color: var(--primary-500);
-      }
     }
     .landingInfo {
       margin-left: auto;
