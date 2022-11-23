@@ -10,7 +10,7 @@ const RegisterWrapper = styled.section`
 
   .logo-register {
     display: block;
-    width: 5.311%;
+    max-width: 120px;
     margin: 20px auto 1.38rem;
   }
 
@@ -36,6 +36,39 @@ const RegisterWrapper = styled.section`
     margin-bottom: 0.5rem;
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
+  }
+
+  .btn-register,
+  input[type="submit"] {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 0;
+    text-decoration: none;
+    padding: 12px 18px;
+    font-size: 12px;
+    line-height: 19px;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    letter-spacing: 3px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -ms-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+  .btn-register {
+    border: solid 2px #fff;
+    background-color: black;
+    color: #fff !important;
+  }
+  .btn-register:hover {
+    border: solid 2px #fff;
+    background: #4149f2;
+    color: white !important;
+  }
+  .btn-register:hover {
+    color: #fff;
   }
 
   h3 {
