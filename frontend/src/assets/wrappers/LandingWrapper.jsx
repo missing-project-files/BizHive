@@ -48,9 +48,6 @@ const Wrapper = styled.main`
       display: none;
     }
     .landingLoginBtn {
-      margin-left: 0;
-      margin-top: 0;
-      margin-right: 0;
       align-items: flex-start;
     }
   }
@@ -91,6 +88,13 @@ const Wrapper = styled.main`
     }
   }
   @media (max-width: 1199px) {
+    .landingLoginBtn {
+      margin-left: 31%;
+      align-items: center;
+    }
+    .landingLogo {
+      margin-top: 20px;
+    }
     .landingContainerPage {
       margin-left: auto;
       margin-right: auto;
@@ -109,6 +113,10 @@ const Wrapper = styled.main`
     }
   }
   @media (min-width: 1200px) {
+    .landingLoginBtn {
+      margin-left: 30%;
+      align-items: center;
+    }
     .landingLogo {
       margin-top: 20px;
     }

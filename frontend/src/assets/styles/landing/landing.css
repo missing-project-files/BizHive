@@ -84,7 +84,6 @@ p {
 }
 .landingLoginBtn,
 input[type="submit"] {
-    margin-left: 25%;
     cursor: pointer;
     border-radius: 0;
     text-decoration: none;
