@@ -11,38 +11,45 @@ const RegisterWrapper = styled.section`
   .logo-register {
     display: block;
     max-width: 120px;
-    margin: 20px auto 1.38rem;
+    margin: 20px auto 290px;
   }
 
   .form-register {
     width: 90vw;
-    max-width: 400px;
+    max-width: 450px;
     border-top: 5px solid var(--primary-500);
     background: var(--white);
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow-2);
-    padding: 2rem 2.5rem;
+    padding: 15px 40px;
     margin: 3rem auto;
     transition: var(--transition);
   }
 
   .form-row {
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
   }
-
   .form-label {
     display: block;
     font-size: var(--smallText);
-    margin-bottom: 0.5rem;
+    margin-bottom: 20px;
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
+  }
+  .form-input {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: var(--borderRadius);
+    background: var(--backgroundColor);
+    border: 1px solid var(--grey-200);
+    margin-bottom: 30px;
   }
 
   .btn-register,
   input[type="submit"] {
-    width: 100%;
+    width: 101%;
     cursor: pointer;
-    border-radius: 0;
+    border-radius: 5px;
     text-decoration: none;
     padding: 12px 18px;
     font-size: 12px;
@@ -73,6 +80,9 @@ const RegisterWrapper = styled.section`
 
   h3 {
     text-align: center;
+    font-family: var(--bodyFont);
+    font-weight: 700;
+    font-size: 3.5vw;
   }
 
   p {
