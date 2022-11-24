@@ -11,7 +11,7 @@ const RegisterWrapper = styled.section`
   .logo-register {
     display: block;
     max-width: 120px;
-    margin: 20px auto 250px;
+    margin: 20px auto 200px;
   }
 
   .form-register {
@@ -27,7 +27,7 @@ const RegisterWrapper = styled.section`
   }
 
   .form-row {
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
   .form-label {
     display: block;
@@ -81,8 +81,8 @@ const RegisterWrapper = styled.section`
   h3 {
     text-align: center;
     font-family: var(--bodyFont);
-    font-weight: 700;
-    font-size: 3.5vw;
+    font-weight: 300;
+    font-size: 2.5vw;
   }
 
   p {

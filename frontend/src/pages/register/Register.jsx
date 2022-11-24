@@ -37,6 +37,16 @@ const Register = () => {
                       value={values.name}
                       handleChange={handleChange}
         />
+        <FormRegister type="text"
+                      name="email"
+                      value={values.name}
+                      handleChange={handleChange}
+        />
+        <FormRegister type="text"
+                      name="password"
+                      value={values.name}
+                      handleChange={handleChange}
+        />
         <button type="submit" className="btn-register">
           submit
         </button>
