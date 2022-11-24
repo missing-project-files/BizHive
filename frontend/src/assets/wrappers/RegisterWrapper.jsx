@@ -11,7 +11,7 @@ const RegisterWrapper = styled.section`
   .logo-register {
     display: block;
     max-width: 120px;
-    margin: 20px auto 290px;
+    margin: 20px auto 250px;
   }
 
   .form-register {
@@ -22,7 +22,7 @@ const RegisterWrapper = styled.section`
     border-radius: var(--borderRadius);
     box-shadow: var(--shadow-2);
     padding: 15px 40px;
-    margin: 3rem auto;
+    margin: 0 auto;
     transition: var(--transition);
   }
 

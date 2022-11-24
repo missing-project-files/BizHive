@@ -1,7 +1,8 @@
 /* eslint-disable */
 import { useState } from "react";
-import RegisterWrapper from "../../assets/wrappers/RegisterWrapper";
 import logo from "../../assets/images/register/logo-no-background.svg";
+import RegisterWrapper from "../../assets/wrappers/RegisterWrapper";
+import FormRegister from "../../components/FormRegister"
 
 const initialState = {
   name: "",
@@ -31,18 +32,14 @@ const Register = () => {
       />
       <form className="form-register" onSubmit={onSubmit}>
         <h3>Login</h3>
-        <div className="form-row">
-          <label htmlFor="name" className="form-label">Name</label>
-          <input type="text"
-                 name="name"
-                 value={values.name}
-                 onChange={handleChange}
-                 className="form-input"
-          />
-          <button type="submit" className="btn-register">
-            submit
-          </button>
-        </div>
+        <FormRegister type="text"
+                      name="name"
+                      value={values.name}
+                      handleChange={handleChange}
+        />
+        <button type="submit" className="btn-register">
+          submit
+        </button>
       </form>
     </RegisterWrapper>
   );
