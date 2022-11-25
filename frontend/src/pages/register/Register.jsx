@@ -31,7 +31,7 @@ const Register = () => {
         className="logo-register"
       />
       <form className="form-register" onSubmit={onSubmit}>
-        <h3>Login</h3>
+        <h5>Register</h5>
         <FormRegister type="text"
                       name="name"
                       value={values.name}
@@ -48,7 +48,7 @@ const Register = () => {
                       handleChange={handleChange}
         />
         <button type="submit" className="btn-register">
-          submit
+          Register
         </button>
       </form>
     </RegisterWrapper>
