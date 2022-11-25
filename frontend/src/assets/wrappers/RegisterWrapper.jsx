@@ -50,11 +50,12 @@ const RegisterWrapper = styled.section`
 
   .btn-register,
   input[type="submit"] {
-    width: 101%;
+    width: 100%;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
-    padding: 12px 18px;
+    margin-top: 20px;
+    padding: 12px;
     font-size: 12px;
     line-height: 19px;
     text-transform: uppercase;
