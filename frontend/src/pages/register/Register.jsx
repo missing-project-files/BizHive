@@ -1,25 +1,32 @@
+/* eslint-disable */
 import { useState } from "react";
 import logo from "../../assets/images/register/logo-no-background.svg";
 import RegisterWrapper from "../../assets/wrappers/RegisterWrapper";
 import FormRegister from "../../components/FormRegister";
+import { toast } from "react-toastify";
 
 const initialState = {
   name: "",
   email: "",
   password: "",
-  isMember: true,
+  isMember: true
 };
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
 
   const handleChange = (e) => {
-    console.log(e.target);
+    const name = e.target.name;
+    const value = e.target.value;
+    setValues({ ...values, [name]: value });
   };
 
   const onSubmit = (e) => {
     e.preventDefault();
-    console.log(e.target);
+    const { name, email, password, isMember } = values;
+    if (!email || !password || (!isMember && !name)) {
+      toast.error("Please fill out all fields");
+    }
   };
 
   const toggleMember = () => {
@@ -39,7 +46,6 @@ const Register = () => {
             handleChange={handleChange}
           />
         )}
-
         <FormRegister
           type="text"
           name="email"
