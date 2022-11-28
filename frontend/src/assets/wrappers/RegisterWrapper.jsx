@@ -86,6 +86,17 @@ const RegisterWrapper = styled.section`
     color: #fff;
   }
 
+  .btn-choose-register {
+    background: transparent;
+    border: transparent;
+    color: #1d4ed8;
+    cursor: pointer;
+    letter-spacing: var(--letterSpacing);
+    font-family: ALSArtemiusSans, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
   h5 {
     margin-bottom: 0;
     text-align: center;
@@ -96,6 +107,7 @@ const RegisterWrapper = styled.section`
   p {
     margin: 1rem 0 0;
     text-align: center;
+    font-family: Helvetica, sans-serif;
   }
 
   @media (max-width: 389px) {
