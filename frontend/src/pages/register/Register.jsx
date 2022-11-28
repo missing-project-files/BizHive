@@ -49,13 +49,13 @@ const Register = () => {
         <FormRegister
           type="text"
           name="email"
-          value={values.name}
+          value={values.email}
           handleChange={handleChange}
         />
         <FormRegister
           type="text"
           name="password"
-          value={values.name}
+          value={values.password}
           handleChange={handleChange}
         />
         <button type="submit" className="btn-register">
