@@ -15,6 +15,7 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
+  // eslint-disable-next-line no-unused-vars
   const { user, isLoading } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
@@ -42,7 +43,6 @@ const Register = () => {
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
-  console.log(typeof type);
   return (
     <RegisterWrapper className="full-register-page">
       <img src={logo} alt="register logo" className="logo-register" />
