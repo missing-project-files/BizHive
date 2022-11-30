@@ -1,8 +1,7 @@
-/* eslint-disable */
 import axios from "axios";
 
 const customFetch = axios.create({
-  baseURL: "amazon"
-})
+  baseURL: "amazon",
+});
 
 export default customFetch;
