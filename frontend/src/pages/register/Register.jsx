@@ -33,9 +33,11 @@ const Register = () => {
       return;
     }
     if (isMember) {
+      // noinspection JSCheckFunctionSignatures
       dispatch(loginUser({ email: email, password: password }));
     }
     if (!isMember) {
+      // noinspection JSCheckFunctionSignatures
       dispatch(registerUser({ name, email, password }));
     }
   };
