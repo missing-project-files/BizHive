@@ -1,4 +1,5 @@
-/* eslint-disable */
+import PropTypes from "prop-types";
+
 const FormRegister = ({ type, name, value, handleChange, labelText }) => {
   return (
     <div className="form-row">
@@ -15,4 +16,13 @@ const FormRegister = ({ type, name, value, handleChange, labelText }) => {
     </div>
   );
 };
+
 export default FormRegister;
+
+FormRegister.propTypes = {
+  type: PropTypes.any,
+  name: PropTypes.string,
+  value: PropTypes.string,
+  handleChange: PropTypes.func,
+  labelText: PropTypes.string,
+};
