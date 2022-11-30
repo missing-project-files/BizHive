@@ -15,7 +15,6 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
-  // eslint-disable-next-line no-unused-vars
   const { user, isLoading } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
@@ -69,7 +68,7 @@ const Register = () => {
           value={values.password}
           handleChange={handleChange}
         />
-        <button type="submit" className="btn-register">
+        <button type="submit" className="btn-register" disabled={isLoading}>
           {values.isMember ? "Login" : "Register"}
         </button>
         <p>
