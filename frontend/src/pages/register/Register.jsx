@@ -1,4 +1,3 @@
-/* eslint-disable */
 import { useState } from "react";
 import logo from "../../assets/images/register/logo-no-background.svg";
 import RegisterWrapper from "../../assets/wrappers/RegisterWrapper";
@@ -11,12 +10,13 @@ const initialState = {
   name: "",
   email: "",
   password: "",
-  isMember: true
+  isMember: true,
 };
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
-  const { user, isLoading } = useSelector(store => store.user);
+  // eslint-disable-next-line no-unused-vars
+  const { user, isLoading } = useSelector((store) => store.user);
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
@@ -30,20 +30,20 @@ const Register = () => {
     const { name, email, password, isMember } = values;
     if (!email || !password || (!isMember && !name)) {
       toast.error("Please fill out all fields");
-      return
+      return;
     }
     if (isMember) {
-      dispatch(loginUser({email: email, password: password}))
+      dispatch(loginUser({ email: email, password: password }));
     }
     if (!isMember) {
-      dispatch(registerUser({name: name, email: email, password: password}))
+      dispatch(registerUser({ name: name, email: email, password: password }));
     }
   };
 
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
-
+  console.log(typeof type);
   return (
     <RegisterWrapper className="full-register-page">
       <img src={logo} alt="register logo" className="logo-register" />
