@@ -52,20 +52,20 @@ const Register = () => {
         <h5>{values.isMember ? "Login" : "Register"}</h5>
         {!values.isMember && (
           <FormRegister
-            type="text"
+            type="name"
             name="name"
             value={values.name}
             handleChange={handleChange}
           />
         )}
         <FormRegister
-          type="text"
+          type="email"
           name="email"
           value={values.email}
           handleChange={handleChange}
         />
         <FormRegister
-          type="text"
+          type="password"
           name="password"
           value={values.password}
           handleChange={handleChange}
