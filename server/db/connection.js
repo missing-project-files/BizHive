@@ -1,8 +1,16 @@
-const mongoose = require('mongoose');
-const express = require('express');
-const { User } = require('./schema/User');
+import mongoose from 'mongoose';
 
-const dbhost = process.env.DBHOST;
-mongoose.connect(dbhost);
+const connectDB = async () => {
+    try {
+        mongoose.set('strictQuery', false);
+        const conn = await mongoose.connect(process.env.MONGO_URL, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log(`INFO: Connected to host: ${conn.connection.host}`);
+    } catch (err) {
+        console.error(err);
+    }
+}
 
-module.exports = { User };
+export default connectDB;
