@@ -32,6 +32,8 @@ const Register = () => {
       toast.error("Please fill out all fields");
       return;
     }
+    console.log("INFO: email:%s, isMember:%s", email, isMember);
+
     if (isMember) {
       // noinspection JSCheckFunctionSignatures
       dispatch(loginUser({ email: email, password: password }));

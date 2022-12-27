@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const customFetch = axios.create({
-  baseURL: "amazon",
+  baseURL: "http://brett.com",
 });
 
 export default customFetch;

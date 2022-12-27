@@ -4,17 +4,20 @@ import { toast } from "react-toastify";
 
 const initialState = {
   isLoading: false,
-  user: null,
+  userInfo: null,
 };
 
 export const registerUser = createAsyncThunk(
   "user/registerUser",
   async (user, thunkAPI) => {
     try {
-      const resp = await customFetch.post("/auth/register", user);
+      const resp = await customFetch.post("/api/auth/register", user);
+      console.log(resp);
       return resp.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue(error.response.data.msg);
+      console.log("ERROR: response.status: " + error.response.status);
+      console.log(error.response.data);
+      return thunkAPI.rejectWithValue(error.response.data);
     }
   }
 );
@@ -40,14 +43,14 @@ const userSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(registerUser.fulfilled, (state, { payload }) => {
-        const { user } = payload;
+        const { userInfo } = payload;
         state.isLoading = false;
-        state.user = user;
-        toast.success(`Hello there ${user.name}.`);
+        state.userInfo = userInfo;
+        toast.success(`Hello there ${userInfo.name}.`);
       })
       .addCase(registerUser.rejected, (state, { payload }) => {
         state.isLoading = false;
-        toast.error(payload);
+        toast.error(payload.error);
       })
       .addCase(loginUser.pending, (state) => {
         state.isLoading = true;
