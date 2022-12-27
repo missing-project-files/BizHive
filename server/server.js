@@ -1,24 +1,28 @@
-import { config } from 'dotenv';
-import express from 'express';
-import path from 'path';
-import bodyParser from 'body-parser';
-import jwt from 'jsonwebtoken';
-import connectDB from './db/connection.js';
-import cors from 'cors';
+const express = require('express')
+const dotenv = require('dotenv')
+const connectDB = require('./db/connection.js')
+const cors = require('cors')
 
-const app = express();
-app.use(express.json());
+const app = express()
+app.use(express.json())
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+
+console.log('INFO: NODE_ENV:' + process.env.NODE_ENV)
 
 if (process.env.NODE_ENV === 'development') {
-  config({ path: '.env.dev' });
-  app.use(cors());
+    dotenv.config({ path: '.env.dev' })
+    app.use(cors())
 } else {
-  config({ path: '.env.prod' });
-  app.use(secure);
+    config({ path: '.env.prod' })
+    app.use(secure)
 }
 
-connectDB();
+connectDB()
 
-app.listen(process.env.PORT, console.log(`INFO: Backend listening on port ${process.env.PORT}`))
+app.use('/api/auth', require('./routes/auth'))
+
+app.listen(
+    process.env.PORT,
+    console.log(`INFO: Backend listening on port ${process.env.PORT}`)
+)
