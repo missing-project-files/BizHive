@@ -36,7 +36,7 @@ export const loginUser = createAsyncThunk(
     } catch (error) {
       console.log("ERROR: response.status: " + error.response.status);
       console.log(error.response.data);
-      return thunkAPI.rejectWithValue(error.response.data.msg);
+      return thunkAPI.rejectWithValue(error.response.data);
     }
   }
 );
@@ -72,7 +72,7 @@ const userSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
         state.isLoading = false;
-        toast.error(payload);
+        toast.error(payload.error);
       });
   },
 });
