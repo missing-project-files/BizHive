@@ -1,28 +1,42 @@
-const express = require('express')
-const dotenv = require('dotenv')
-const connectDB = require('./db/connection.js')
-const cors = require('cors')
+const express = require('express');
+const dotenv = require('dotenv');
+const connectDB = require('./db/connection.js');
+const cors = require('cors');
 
-const app = express()
-app.use(express.json())
+const app = express();
+app.use(express.json());
 
-process.env.NODE_ENV = process.env.NODE_ENV || 'development'
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-console.log('INFO: NODE_ENV:' + process.env.NODE_ENV)
+console.log('INFO: NODE_ENV:' + process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'development') {
-    dotenv.config({ path: '.env.dev' })
-    app.use(cors())
-} else {
-    config({ path: '.env.prod' })
-    app.use(secure)
+  dotenv.config({ path: '.env.dev' });
+  app.use(cors());
 }
 
-connectDB()
+if (process.env.NODE_ENV === 'production') {
+  config({ path: '.env.prod' });
+  app.use(secure);
+  app.use(express.static(path.join(__dirname, '../frontend/build')));
 
-app.use('/api/auth', require('./routes/auth'))
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '../frontend', 'build', 'index.html'));
+  });
+}
+
+connectDB();
+
+app.use('/api/auth', require('./routes/auth'));
 
 app.listen(
-    process.env.PORT,
-    console.log(`INFO: Backend listening on port ${process.env.PORT}`)
-)
+  process.env.PORT,
+  console.log(`INFO: Backend listening on port ${process.env.PORT}`)
+);
+
+// Enable HTTPS
+// const options = {
+//   key: fs.readFileSync('server.key'),
+//   cert: fs.readFileSync('server.cert'),
+// };
+// https.createServer(options, app).listen(443);

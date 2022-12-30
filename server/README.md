@@ -1,3 +1,9 @@
+### Use postman to check that endpoints available (returns server current time)
+
+```sh
+GET http://brett.com/api/auth/servertime
+```
+
 ### Edit your etc/hosts
 
 ```sh
@@ -37,7 +43,7 @@ PORT=80
 POST http://brett.com/api/auth/register
 Request body: { name: 'test', email: 'test@test.com', password: 'test' }
 Response:
-- { error: "Password must be of atleast 5 characters" }
+- { error: "Password must be at least 8 characters long and contain at least one letter, one number, and one special character" }
 - { "userInfo": { "name": "Alex", "authtoken": "eyJhbGciOiJIUzI" }
 
 ```
