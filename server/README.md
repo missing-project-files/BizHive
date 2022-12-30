@@ -47,3 +47,8 @@ Response:
 - { "userInfo": { "name": "Alex", "authtoken": "eyJhbGciOiJIUzI" }
 
 ```
+
+```
+POST http://brett.com/api/auth/login
+Request body: { email: 'test@test.com', password: 'test' }
+```

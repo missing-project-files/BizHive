@@ -30,9 +30,12 @@ export const loginUser = createAsyncThunk(
   "user/loginUser",
   async (user, thunkAPI) => {
     try {
-      const resp = await customFetch.post("/auth/login", user);
+      const resp = await customFetch.post("/api/auth/login", user);
+      console.log(resp);
       return resp.data;
     } catch (error) {
+      console.log("ERROR: response.status: " + error.response.status);
+      console.log(error.response.data);
       return thunkAPI.rejectWithValue(error.response.data.msg);
     }
   }
@@ -61,11 +64,11 @@ const userSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(loginUser.fulfilled, (state, { payload }) => {
-        const { user } = payload;
+        const { userInfo } = payload;
         state.isLoading = false;
-        state.user = user;
-        addUserToLocalStorage(user);
-        toast.success(`Welcome back ${user.name}!`);
+        state.userInfo = userInfo;
+        addUserToLocalStorage(userInfo);
+        toast.success(`Welcome back ${userInfo.name}!`);
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
         state.isLoading = false;
