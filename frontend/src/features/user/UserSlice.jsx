@@ -52,13 +52,13 @@ const userSlice = createSlice({
       .addCase(registerUser.fulfilled, (state, { payload }) => {
         const { userInfo } = payload;
         state.isLoading = false;
-        state.userInfo = userInfo;
+        state.user = userInfo;
         addUserToLocalStorage(userInfo);
         toast.success(`Hello there ${userInfo.name}.`);
       })
       .addCase(registerUser.rejected, (state, { payload }) => {
         state.isLoading = false;
-        toast.error(payload.error);
+        toast.error(payload);
       })
       .addCase(loginUser.pending, (state) => {
         state.isLoading = true;
@@ -66,13 +66,13 @@ const userSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, { payload }) => {
         const { userInfo } = payload;
         state.isLoading = false;
-        state.userInfo = userInfo;
+        state.user = userInfo;
         addUserToLocalStorage(userInfo);
         toast.success(`Welcome back ${userInfo.name}!`);
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
         state.isLoading = false;
-        toast.error(payload.error);
+        toast.error(payload);
       });
   },
 });
