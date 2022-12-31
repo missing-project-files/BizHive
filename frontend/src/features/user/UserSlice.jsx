@@ -58,7 +58,7 @@ const userSlice = createSlice({
       })
       .addCase(registerUser.rejected, (state, { payload }) => {
         state.isLoading = false;
-        toast.error(payload);
+        toast.error(payload.error);
       })
       .addCase(loginUser.pending, (state) => {
         state.isLoading = true;
@@ -72,7 +72,7 @@ const userSlice = createSlice({
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
         state.isLoading = false;
-        toast.error(payload);
+        toast.error(payload.error);
       });
   },
 });
