@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import logo from "../../assets/images/register/logo-no-background.svg";
 import RegisterWrapper from "../../assets/wrappers/RegisterWrapper";
 import FormRegister from "../../components/FormRegister";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser, registerUser } from "../../features/user/UserSlice";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   name: "",
@@ -15,10 +16,9 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
-  // eslint-disable-next-line no-unused-vars
   const { user, isLoading } = useSelector((store) => store.user);
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -47,6 +47,16 @@ const Register = () => {
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
+  console.log("user: " + user);
+  useEffect(() => {
+    if (user) {
+      console.log("user is there");
+      setTimeout(() => {
+        navigate("/Dashboard");
+      }, 2000);
+    }
+  }, [user]);
+
   return (
     <RegisterWrapper className="full-register-page">
       <img src={logo} alt="register logo" className="logo-register" />
