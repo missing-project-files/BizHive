@@ -64,8 +64,8 @@ const userSlice = createSlice({
         toast.success(`Hello there ${userInfo.name}.`);
       })
       .addCase(registerUser.rejected, (state, { payload }) => {
-        state.isLoading = false;
         const { error } = payload;
+        state.isLoading = false;
         toast.error(error);
       })
       .addCase(loginUser.pending, (state) => {
@@ -79,8 +79,8 @@ const userSlice = createSlice({
         toast.success(`Welcome back ${userInfo.name}!`);
       })
       .addCase(loginUser.rejected, (state, { payload }) => {
-        state.isLoading = false;
         const { error } = payload;
+        state.isLoading = false;
         toast.error(error);
       });
   },
