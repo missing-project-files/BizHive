@@ -40,10 +40,10 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
-
 const userSlice = createSlice({
   name: "user",
-  initialState,
+  initialState: initialState,
+  reducers: {},
   extraReducers: (builder) => {
     builder
       .addCase(registerUser.pending, (state) => {
