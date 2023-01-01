@@ -35,11 +35,9 @@ const Register = () => {
     console.log("INFO: email:%s, isMember:%s", email, isMember);
 
     if (isMember) {
-      // noinspection JSCheckFunctionSignatures
-      dispatch(loginUser({ email: email, password: password }));
+      dispatch(loginUser({ email, password }));
     }
     if (!isMember) {
-      // noinspection JSCheckFunctionSignatures
       dispatch(registerUser({ name, email, password }));
     }
   };
@@ -47,10 +45,8 @@ const Register = () => {
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
   };
-  console.log("user: " + user);
   useEffect(() => {
     if (user) {
-      console.log("user is there");
       setTimeout(() => {
         navigate("/Dashboard");
       }, 2000);

@@ -13,9 +13,13 @@ const initialState = {
 
 export const registerUser = createAsyncThunk(
   "user/registerUser",
-  async (user, thunkAPI) => {
+  async ({ name, email, password }, thunkAPI) => {
     try {
-      const resp = await customFetch.post("/api/auth/register", user);
+      const resp = await customFetch.post("/api/auth/register", {
+        email,
+        name,
+        password,
+      });
       console.log(resp);
       return resp.data;
     } catch (error) {
@@ -28,9 +32,12 @@ export const registerUser = createAsyncThunk(
 
 export const loginUser = createAsyncThunk(
   "user/loginUser",
-  async (user, thunkAPI) => {
+  async ({ email, password }, thunkAPI) => {
     try {
-      const resp = await customFetch.post("/api/auth/login", user);
+      const resp = await customFetch.post("/api/auth/login", {
+        email,
+        password,
+      });
       console.log(resp);
       return resp.data;
     } catch (error) {
