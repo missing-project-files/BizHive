@@ -11,12 +11,12 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 console.log('INFO: NODE_ENV:' + process.env.NODE_ENV);
 
 if (process.env.NODE_ENV === 'development') {
-  dotenv.config({ path: '.env.dev' });
+  dotenv.config({ path: '../.env.dev' });
   app.use(cors());
 }
 
 if (process.env.NODE_ENV === 'production') {
-  config({ path: '.env.prod' });
+  dotenv.config({ path: '.env.dev.prod' });
   app.use(secure);
   app.use(express.static(path.join(__dirname, '../frontend/build')));
 
