@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const connectDB = require('./db/connection.js');
 const cors = require('cors');
+const path = require('path');
 
 const app = express();
 app.use(express.json());
@@ -16,8 +17,8 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  dotenv.config({ path: '.env.dev.prod' });
-  app.use(secure);
+  dotenv.config({ path: '.env.prod' });
+  //app.use(secure);
   app.use(express.static(path.join(__dirname, '../frontend/build')));
 
   app.get('*', (req, res) => {
@@ -31,7 +32,7 @@ app.use('/api/auth', require('./routes/auth'));
 
 app.listen(
   process.env.PORT,
-  console.log(`INFO: Backend listening on port ${process.env.PORT}`)
+  console.log(`INFO: Backend listening on port ${process.env.PORT} `)
 );
 
 // Enable HTTPS
