@@ -17,7 +17,6 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 if (process.env.NODE_ENV === 'production') {
-  dotenv.config({ path: '.env.prod' });
   //app.use(secure);
   app.use(express.static(path.join(__dirname, '../frontend/build')));
 
