@@ -1,20 +1,15 @@
 {
-  "env": {
-    "commonjs": true,
-    "es2021": true,
-    "node": true
-  },
-  "extends": "google",
-  "overrides": [],
-  "parserOptions": {
-    "ecmaVersion": "latest"
-  },
-  "rules": {
-    "indent": "off",
-    "object-curly-spacing": [2, "always"],
-    "arrow-parens": ["error", "as-needed"],
-    "rules": { "trailing-comma": false },
-    "max-len": ["error", { "code": 120 }],
-    "comma-dangle": "off"
-  }
+    "env": {
+        "browser": true,
+        "node": true,
+        "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest"
+    },
+    "rules": {
+    }
 }

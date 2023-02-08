@@ -1,9 +1,9 @@
-const mongoose = require('mongoose')
+const { connect, set } = require('mongoose')
 
 const connectDB = async () => {
     try {
-        mongoose.set('strictQuery', false)
-        const conn = await mongoose.connect(process.env.MONGO_URL, {
+        set('strictQuery', false)
+        const conn = await connect(process.env.MONGO_URL, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
         })

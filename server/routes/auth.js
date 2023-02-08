@@ -4,7 +4,7 @@ const User = require('../models/User');
 const { body, check, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const fetchuser = require('../middleware/fetchuser');
+const fetchUser = require('../middleware/fetchuser');
 
 // simple logger for this router's requests
 // all requests to this router will first hit this middleware
@@ -78,7 +78,7 @@ router.post(
       };
 
       console.log(
-        'INFO: Response obj name:%s, authtoken:%s',
+        'INFO: Response obj name:%s, auth-token:%s',
         userInfo.name,
         userInfo.token
       );
@@ -86,13 +86,13 @@ router.post(
       res.json({ userInfo });
     } catch (error) {
       console.log(error);
-      res.status(500).send('Internal server error has occured');
+      res.status(500).send('Internal server error has occurred');
     }
   }
 );
 
 // use postman to call GET http://brett.com/api/auth/servertime or http://localhost/api/auth/servertime
-router.get('/servertime', async (req, res) => {
+router.get('/server-time', async (req, res) => {
   try {
     res.send(String(new Date().toUTCString()));
   } catch (error) {
@@ -147,7 +147,7 @@ router.post(
       };
 
       console.log(
-        'INFO: Response obj name:%s, authtoken:%s',
+        'INFO: Response obj name:%s, auth-token:%s',
         userInfo.name,
         userInfo.token
       );
@@ -155,7 +155,7 @@ router.post(
       res.json({ userInfo });
     } catch (error) {
       console.error(error);
-      res.status(500).send('Internal server error has occured');
+      res.status(500).send('Internal server error has occurred');
     }
   }
 );
