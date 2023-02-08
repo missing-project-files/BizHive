@@ -4,22 +4,25 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "cd frontend && npm run start",
-    "server": "cd server && npm run dev",
+    "client": "cd frontend && npm install && npm run start",
+    "server": "cd server && npm install && npm run dev",
     "start": "concurrently \"npm run client\" \"npm run server\" "
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Berserkeras/brett_django.git"
+    "url": "git+https://github.com/missing-project-files/BizHive.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Berserkeras/brett_django/issues"
+    "url": "https://github.com/missing-project-files/BizHive/issues"
   },
-  "homepage": "https://github.com/Berserkeras/brett_django#readme",
+  "homepage": "https://github.com/missing-project-files/BizHive#readme",
   "devDependencies": {
     "concurrently": "^7.6.0"
+  },
+  "dependencies": {
+    "react-scripts": "^5.0.1"
   }
 }
